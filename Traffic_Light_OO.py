@@ -27,23 +27,6 @@ def tl_seq():
 for tl_cnt in range(2):
     while True:
         tl_seq()
-    
-
-
-
-#class Dog:
-
-#    kind = 'canine'         # class variable shared by all instances
-
-#    def __init__(self, name):
-#        self.name = name    # instance variable unique to each instance
-        
-#d = Dog('Fido')
-#e = Dog('Buddy')
-#print(d.kind)
-#print(e.kind)
-#print(d.name)
-#print(e.name)
 
 
 print('finishing')
