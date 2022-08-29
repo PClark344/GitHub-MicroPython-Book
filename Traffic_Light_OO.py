@@ -23,21 +23,22 @@ class TL():
         self.glist = [0,0,1]
         self.alist = [0,1,0]
 
-def tl_seq():
-    tlight = TL()
-    utime.sleep(time_delay_long)
-    print(tlight.ralist)
-    utime.sleep(time_delay_long)
-    print(tlight.glist)
-    utime.sleep(time_delay_long)
-    print(tlight.alist)   
-    utime.sleep(time_delay_long)
-    print(tlight.rlist)
+    def tl_seq():
+        tlight = TL()
+        print(tlight.rlist)
+        utime.sleep(time_delay_long)
+        print(tlight.ralist)
+        utime.sleep(time_delay_long)
+        print(tlight.glist)
+        utime.sleep(time_delay_long)
+        print(tlight.alist)   
+        utime.sleep(time_delay_long)
+        print(tlight.rlist)
 
 while True:
     for tl_cnt in range(5):
         print(tl_cnt)
-        tl = tl_seq()
+        tl = TL.tl_seq()
 
 print('finishing')
 
