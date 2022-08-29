@@ -2,8 +2,18 @@ import utime
 import machine
 
 # constants
-time_delay_long = 3
+time_delay_long = 1
 time_delay_short = 1
+
+led_red1 = machine.Pin(15, machine.Pin.OUT)
+led_amber1 = machine.Pin(13, machine.Pin.OUT)
+led_green1 = machine.Pin(12, machine.Pin.OUT)
+
+led_red2 = machine.Pin(15, machine.Pin.OUT)
+led_amber2 = machine.Pin(13, machine.Pin.OUT)
+led_green2 = machine.Pin(12, machine.Pin.OUT)
+
+# initialise
 
 # classes
 class TL():
@@ -15,7 +25,6 @@ class TL():
 
 def tl_seq():
     tlight = TL()
-    print(tlight.rlist)
     utime.sleep(time_delay_long)
     print(tlight.ralist)
     utime.sleep(time_delay_long)
@@ -23,11 +32,12 @@ def tl_seq():
     utime.sleep(time_delay_long)
     print(tlight.alist)   
     utime.sleep(time_delay_long)
-   
-for tl_cnt in range(2):
-    while True:
-        tl_seq()
+    print(tlight.rlist)
 
+while True:
+    for tl_cnt in range(5):
+        print(tl_cnt)
+        tl = tl_seq()
 
 print('finishing')
 
