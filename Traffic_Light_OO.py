@@ -13,15 +13,20 @@ led_red2 = machine.Pin(15, machine.Pin.OUT)
 led_amber2 = machine.Pin(13, machine.Pin.OUT)
 led_green2 = machine.Pin(12, machine.Pin.OUT)
 
+RLIST = [1,0,0]
+RALIST = [1,1,0]
+ALIST = [0,1,0]
+GLIST = [0,0,1]
+
 # initialise
 
 # classes
 class TL():
-    def __init__(self):
-        self.rlist = [1,0,0]
-        self.ralist = [1,1,0]
-        self.glist = [0,0,1]
-        self.alist = [0,1,0]
+    def __init__(self,RLIST,RALIST,ALIST,GLIST):
+        self.rlist = RLIST
+        self.ralist = RALIST
+        self.glist = GLIST
+        self.alist = ALIST
 
     def tl_seq():
         tlight = TL()
